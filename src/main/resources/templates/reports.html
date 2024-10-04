@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista Zgłoszeń</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+    <h1>Lista Zgłoszeń</h1>
+    <a th:href="@{/}">Strona Domowa</a>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Nauczyciel</th>
+            <th>Sala</th>
+            <th>Opis Problemu</th>
+        </tr>
+        <tr th:each="report : ${reports}">
+            <td th:text="${report.id}"></td>
+            <td th:text="${report.teacher}"></td>
+            <td th:text="${report.room}"></td>
+            <td th:text="${report.problemDescription}"></td>
+        </tr>
+    </table>
+</body>
+</html>

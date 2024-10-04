@@ -1,0 +1,2 @@
+INSERT INTO REPORT (TEACHER, ROOM, PROBLEM_DESCRIPTION) VALUES ('Jan Kowalski', '101', 'Projektor nie działa.');
+INSERT INTO REPORT (TEACHER, ROOM, PROBLEM_DESCRIPTION) VALUES ('Anna Nowak', '202', 'Komputer nie uruchamia się.');
