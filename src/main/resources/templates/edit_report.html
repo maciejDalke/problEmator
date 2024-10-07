@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Edytuj Zgłoszenie</title>
+  <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+  <a th:href="@{/}" class="back-to-menu">Powrót do menu głównego</a>
+  <div class="container">
+    <h1>Edytuj Zgłoszenie</h1>
+    <form th:action="@{'/reports/update/' + ${report.id}}" th:object="${report}" method="post">
+      <div class="form-group">
+        <label for="status">Status:</label>
+        <select id="status" th:field="*{status}" class="form-control">
+          <option value="Nowe">Nowe</option>
+          <option value="W trakcie">W trakcie</option>
+          <option value="Zakończone">Zakończone</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="startDate">Data Rozpoczęcia:</label>
+        <input type="date" id="startDate" th:field="*{startDate}" class="form-control" />
+      </div>
+      <button type="submit" class="btn btn-primary">Zapisz</button>
+    </form>
+  </div>
+</body>
+</html>
